@@ -38,7 +38,7 @@
 
 ## **🛠️ 기술 스택**
 - Frontend
-  * React
+  * React-native
 - Backend
   * 웹 프레임워크 : FastAPI
   * 데이터베이스 : MySQL

@@ -1,6 +1,6 @@
 # 딥페이크 탐지 웹사이트 'IZREAL'
 
-[재단법인 미래와 소프트웨어와 함께하는 제5회 아이디어 공모전](https://edu.ggumeasy.com/?pn=product.view&pcode=Z7109-W6080-V3918) 에 **DeepFake** 주제로 참여함.
+[재단법인 미래와 소프트웨어와 함께하는 제5회 아이디어 공모전](https://edu.ggumeasy.com/?pn=product.view&pcode=Z7109-W6080-V3918) 에 `DeepFake` 주제로 참여함.
 
 ![IZREAL_logo](https://github.com/user-attachments/assets/bb2834a3-f5ba-4f65-9fe8-618f4c921767)
 
@@ -52,17 +52,17 @@
 
 ## **🛠️ 기술 스택**
 - **Frontend**
-  * React-native
+  * `React-native`
 - **Backend**
-  * 웹 프레임워크 : FastAPI
-  * 데이터베이스 : MySQL
-  * 언어 : Python
+  * 웹 프레임워크 : `FastAPI`
+  * 데이터베이스 : `MySQL`
+  * 언어 : `Python`
 - **딥페이크 탐지**
-  * 얼굴 감지 : MTCNN (https://github.com/ipazc/mtcnn)
-  * 영상 내에 얼굴이 있는 경우 : EfficientNet 
-  * 영상 내에 얼굴이 없는 경우 : Optical Flow + Edge Map
+  * 얼굴 감지 : `MTCNN` (https://github.com/ipazc/mtcnn)
+  * 영상 내에 얼굴이 있는 경우 : `EfficientNet` 
+  * 영상 내에 얼굴이 없는 경우 : `Optical Flow` + `Edge Map`
 - **유튜브 영상 다운로드**
-  * Pytubefix (https://github.com/JuanBindez/pytubefix)
+  * `Pytubefix` (https://github.com/JuanBindez/pytubefix)
 
 
 
@@ -93,6 +93,7 @@ source testvenv/bin/activate  # macOS/Linux
 FastAPI 실행
 ```
 cd backend
+pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 

@@ -72,7 +72,7 @@
 <br>
 
 
-## 실습 환경 구성
+## **💻 실습 환경 구성**
 
 backend, frontend, MySQL (DB) 환경 설정을 위한 설명. 
 
@@ -94,7 +94,7 @@ backend, frontend, MySQL (DB) 환경 설정을 위한 설명.
 ![Image](https://github.com/user-attachments/assets/699e62b2-136b-469e-9780-fe9157b7f513)
 <br>
 
-### frontend 환경설정
+### frontend 환경 설정
 1. 로컬에 node.js 가 설치되어 있어야 함. 
 2. 새 cmd open
 3. 프로젝트 폴더의 frontend 폴더로 이동 (cd frontend 입력)

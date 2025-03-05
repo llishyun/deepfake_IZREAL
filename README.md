@@ -78,6 +78,7 @@ backend, frontend, MySQL (DB) 환경 설정을 위한 설명.
 4. video_db 이름의 DB 만들기 -> CREATE DATABASE video_db { 어쩌구 } 스크린 캡쳐해서 붙이기 
 5. USE video_db; 입력하고 cmd 에 DATABASE changed 출력 확인
    
+![Image](https://github.com/user-attachments/assets/699e62b2-136b-469e-9780-fe9157b7f513)
 <br>
 
 ### frontend 환경설정

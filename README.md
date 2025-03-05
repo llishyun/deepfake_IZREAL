@@ -21,20 +21,22 @@
 
 <br>
 
-## ** 기술 스택 **
+## **🛠️기술 스택**
 - Frontend
   * React
 - Backend
   * 웹 프레임워크 : FastAPI
   * 데이터베이스 : MySQL
   * 언어 : Python
-  * 
+- 딥페이크 탐지
+  * EfficientNet
+  * BlazeFace
+  * Optical Flow + Edge Map
+- 유튜브 영상 다운 및 처리
+  * Pytubefix (https://github.com/JuanBindez/pytubefix)
 
 
-## **🛠️ Model**
-- EfficientNet
-- BlazeFace
-- Optical Flow + Edge Map
+
   
 첨부할 이미지
   1. 구현 페이지 (시작 페이지, 클릭한 후 투표페이지, 수치 바뀐 마지막 페이지 첨부 - 보고서에도 작성)

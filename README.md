@@ -80,6 +80,7 @@ Backend, Frontend, MySQL (DB) 환경 설정을 위한 설명.
 ```
 git clone https://github.com/llishyun/deepfake_IZREAL.git
 ```
+<br>
 
 ### 2. Backend 환경 설정
 가상 환경 생성 및 활성화
@@ -95,6 +96,8 @@ cd backend
 uvicorn main:app --reload
 ```
 
+<br>
+
 ### 3. MySQL (DB) 환경 설정
 MySQL 접속 (로컬에 MySQL이 설치되어 있어야 합니다.)
 ```
@@ -107,6 +110,8 @@ USE video_db;
 ```
 DATABASE changed 메시지가 출력되면 정상적으로 적용된 것입니다.
 
+<br>
+
 ### 4. Frontend 환경 설정
 Node.js 설치 확인 후 패키지 설치
 ```
@@ -118,12 +123,15 @@ Frontend 실행
 npm start
 ```
 
+<br>
+
 ### 5. FastAPI 동작 확인
 FastAPI가 정상적으로 실행되는지 확인하기 위해 다음 명령어를 실행합니다.
 ```
 curl -X POST "http://127.0.0.1:8000/predict/" -H "Content-Type: application/json" -d "{\"url\": \"유튜브 쇼츠 링크 입력\"}"
 ```
 JSON 형식으로 응답이 오면 정상적으로 동작하는 것입니다.
+
 <br>
 
 ### MySQL(DB) 환경 설정
@@ -145,7 +153,4 @@ JSON 형식으로 응답이 오면 정상적으로 동작하는 것입니다.
 
 <br><br>
 
-## FastAPI 확인 
-cmd 에 curl -X POST "http://127.0.0.1:8000/predict/" -H "Content-Type: application/json" -d "{\"url\": \"유튜브 쇼츠 링크 입력 란"}"
 
---> json 파일 형식으로 출력되면 잘 동작하는 것!

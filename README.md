@@ -59,7 +59,7 @@
   * 언어 : Python
 - 딥페이크 탐지
   * EfficientNet
-  * BlazeFace
+  * 얼굴 검출 : MTCNN (https://github.com/ipazc/mtcnn)
   * Optical Flow + Edge Map
 - 유튜브 영상 다운 및 처리
   * Pytubefix (https://github.com/JuanBindez/pytubefix)

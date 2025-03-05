@@ -37,8 +37,10 @@ const VotePopup = ({ videoId, onClose }) => {
     return (
         <div className="popup">
             <h2>이 영상이 딥페이크라고 생각하시나요?</h2>
-            <button onClick={() => handleVote(true)}>Yes</button>
-            <button onClick={() => handleVote(false)}>No</button>
+            <div className="vote-buttons">
+                <button className="yes-button" onClick={() => handleVote(true)}>Yes</button>
+                <button className="no-button" onClick={() => handleVote(false)}>No</button>
+            </div>
             <p>{message}</p>
         </div>
     );

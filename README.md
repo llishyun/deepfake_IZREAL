@@ -74,18 +74,56 @@
 
 ## **💻 실습 환경 구성**
 
-backend, frontend, MySQL (DB) 환경 설정을 위한 설명. 
+Backend, Frontend, MySQL (DB) 환경 설정을 위한 설명. 
 
+### 1. 프로젝트 클론
 ```
 git clone https://github.com/llishyun/deepfake_IZREAL.git
 ```
 
-### backend 환경 설정
-1. 새 cmd open 
-2. 프로젝트 폴더에 가상환경 만들고 activate  :
-     python -m venv testvenv => venv\Scripts\activate
-4. cd backend 로 backend 페이지로 이동한 후 FastAPI 실행을 위한 uvicorn main:app --reload 입력
+### 2. Backend 환경 설정
+가상 환경 생성 및 활성화
+```
+cd deepfake_IZREAL
+python -m venv testvenv
+venv\Scripts\activate  # Windows
+source testvenv/bin/activate  # macOS/Linux
+```
+FastAPI 실행
+```
+cd backend
+uvicorn main:app --reload
+```
 
+### 3. MySQL (DB) 환경 설정
+MySQL 접속 (로컬에 MySQL이 설치되어 있어야 합니다.)
+```
+mysql -u root -p
+```
+비밀번호 입력 후 DB 생성
+```
+CREATE DATABASE video_db;
+USE video_db;
+```
+DATABASE changed 메시지가 출력되면 정상적으로 적용된 것입니다.
+
+### 4. Frontend 환경 설정
+Node.js 설치 확인 후 패키지 설치
+```
+cd frontend
+npm install axios @mui/material @mui/icons-material react-router-dom react-chartjs-2 chart.js
+```
+Frontend 실행
+```
+npm start
+```
+
+### 5. FastAPI 동작 확인
+FastAPI가 정상적으로 실행되는지 확인하기 위해 다음 명령어를 실행합니다.
+```
+curl -X POST "http://127.0.0.1:8000/predict/" -H "Content-Type: application/json" -d "{\"url\": \"유튜브 쇼츠 링크 입력\"}"
+```
+JSON 형식으로 응답이 오면 정상적으로 동작하는 것입니다.
 <br>
 
 ### MySQL(DB) 환경 설정

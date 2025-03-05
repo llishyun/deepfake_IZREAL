@@ -1,4 +1,4 @@
-# mysql 에 따른 backend code 수정 사항
+## mysql 에 따른 backend code 수정 사항
 
 1. model.py 에서 DB MySQL 연결에 있어 아래와 같이 본인 password 입력
    DATABASE_URL = "mysql+pymysql://root:your_password@localhost/video_db"

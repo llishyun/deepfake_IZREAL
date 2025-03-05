@@ -49,5 +49,5 @@ backend, frontend, MySQL (DB) 환경 설정을 위한 설명.
 1. 로컬에 node.js 가 설치되어 있어야 함. 
 2. 새 cmd open
 3. 프로젝트 폴더의 frontend 폴더로 이동 (cd frontend 입력)
-4. cmd에 npm <install ~ 설치문구 입력 예정 ~ .js> 입력
+4. cmd에 npm install axios @mui/material @mui/icons-material react-router-dom react-chartjs-2 chart.js 입력하여 설치
 5. npm start 입력후 localhost:3000 부분 Ctrl+click 으로 접속

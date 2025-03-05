@@ -42,7 +42,7 @@
 <br>
 
 ## **💝 기대 효과**
-1. 링크 복사/붙여넣기/클릭 만으로 숏폼 콘텐츠의 딥페이크 여부를 빠르게 확인할 수 있어 허위 정보 확산을 막아 사회적 혼란을 예방할 수 있다.
+1. 링크 복사, 붙여넣기, 클릭 만으로 숏폼 콘텐츠의 딥페이크 여부를 빠르게 확인할 수 있어 허위 정보 확산을 막아 사회적 혼란을 예방할 수 있다.
 2. 영상 내의 얼굴 유무에 따라 분석을 달리하여 더 정확한 분석이 가능하다.
 3. 실제 사용자의 투표 결과를 반영한 Adaptive Learning 방식을 사용하여 모델의 성능을 개선시킬 수 있다.
 4. 사용자의 지속적인 피드백을 통해 모델의 신뢰도를 향상시킬 수 있다.
@@ -51,17 +51,17 @@
 <br>
 
 ## **🛠️ 기술 스택**
-- Frontend
+- **Frontend**
   * React-native
-- Backend
+- **Backend**
   * 웹 프레임워크 : FastAPI
   * 데이터베이스 : MySQL
   * 언어 : Python
-- 딥페이크 탐지
+- **딥페이크 탐지**
   * 얼굴 감지 : MTCNN (https://github.com/ipazc/mtcnn)
   * 영상 내에 얼굴이 있는 경우 : EfficientNet 
   * 영상 내에 얼굴이 없는 경우 : Optical Flow + Edge Map
-- 유튜브 영상 다운 및 처리
+- **유튜브 영상 다운로드**
   * Pytubefix (https://github.com/JuanBindez/pytubefix)
 
 

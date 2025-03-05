@@ -28,7 +28,7 @@
 
 <br>
 
-![Image](https://github.com/user-attachments/assets/22eda680-cd65-429b-9678-783efb619f7b)
+![Image](https://github.com/user-attachments/assets/ecaec2c2-395f-4218-95e5-f8ac762e21d6)
 
 <br>
 

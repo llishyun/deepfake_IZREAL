@@ -2,6 +2,8 @@
 
 재단법인 미래와 소프트웨어와 함께하는 제5회 아이디어 공모전
 
+![IZREAL_logo](https://github.com/user-attachments/assets/bb2834a3-f5ba-4f65-9fe8-618f4c921767)
+
 ---
 
 <br>

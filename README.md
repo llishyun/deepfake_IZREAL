@@ -58,9 +58,9 @@
   * 데이터베이스 : MySQL
   * 언어 : Python
 - 딥페이크 탐지
-  * EfficientNet
-  * 얼굴 검출 : MTCNN (https://github.com/ipazc/mtcnn)
-  * Optical Flow + Edge Map
+  * 얼굴 감지 : MTCNN (https://github.com/ipazc/mtcnn)
+  * 영상 내에 얼굴이 있는 경우 : EfficientNet 
+  * 영상 내에 얼굴이 없는 경우 : Optical Flow + Edge Map
 - 유튜브 영상 다운 및 처리
   * Pytubefix (https://github.com/JuanBindez/pytubefix)
 

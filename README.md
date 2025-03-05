@@ -76,6 +76,10 @@
 
 backend, frontend, MySQL (DB) 환경 설정을 위한 설명. 
 
+```
+git clone https://github.com/llishyun/deepfake_IZREAL.git
+```
+
 ### backend 환경 설정
 1. 새 cmd open 
 2. 프로젝트 폴더에 가상환경 만들고 activate  :

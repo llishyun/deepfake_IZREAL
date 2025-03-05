@@ -1,0 +1,16 @@
+fastapi 
+uvicorn
+pytubefix
+torch
+torchvision
+efficientnet-pytorch
+opencv-python-headless
+scikit-image
+numpy
+scipy
+facenet-pytorch==2.5.2
+mysql-connector-python
+pymysql
+sqlalchemy
+mysqlclient
+cryptography

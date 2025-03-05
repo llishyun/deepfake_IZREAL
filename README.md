@@ -1,6 +1,6 @@
 # 딥페이크 탐지 웹사이트 'IZREAL'
 
-재단법인 미래와 소프트웨어와 함께하는 제5회 아이디어 공모전
+[재단법인 미래와 소프트웨어와 함께하는 제5회 아이디어 공모전](https://edu.ggumeasy.com/?pn=product.view&pcode=Z7109-W6080-V3918) 에 **DeepFake** 주제로 참여함.
 
 ![IZREAL_logo](https://github.com/user-attachments/assets/bb2834a3-f5ba-4f65-9fe8-618f4c921767)
 

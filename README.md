@@ -55,7 +55,8 @@
 
 ## Model
 
-
+<br>
+<br>
 
 
 ## 실습 환경 구성
@@ -68,6 +69,7 @@ backend, frontend, MySQL (DB) 환경 설정을 위한 설명.
      python -m venv testvenv => venv\Scripts\activate
 4. cd backend 로 backend 페이지로 이동한 후 FastAPI 실행을 위한 uvicorn main:app --reload 입력
 
+<br>
 
 ### MySQL(DB) 환경 설정
 1. 로컬에 MySQL 이 설치되어 있어야 함.
@@ -76,7 +78,7 @@ backend, frontend, MySQL (DB) 환경 설정을 위한 설명.
 4. video_db 이름의 DB 만들기 -> CREATE DATABASE video_db { 어쩌구 } 스크린 캡쳐해서 붙이기 
 5. USE video_db; 입력하고 cmd 에 DATABASE changed 출력 확인
    
-
+<br>
 
 ### frontend 환경설정
 1. 로컬에 node.js 가 설치되어 있어야 함. 
@@ -84,3 +86,10 @@ backend, frontend, MySQL (DB) 환경 설정을 위한 설명.
 3. 프로젝트 폴더의 frontend 폴더로 이동 (cd frontend 입력)
 4. cmd에 npm install axios @mui/material @mui/icons-material react-router-dom react-chartjs-2 chart.js 입력하여 설치
 5. npm start 입력후 localhost:3000 부분 Ctrl+click 으로 접속
+
+<br><br>
+
+## FastAPI 확인 
+cmd 에 curl -X POST "http://127.0.0.1:8000/predict/" -H "Content-Type: application/json" -d "{\"url\": \"유튜브 쇼츠 링크 입력 란"}"
+
+--> json 파일 형식으로 출력되면 잘 동작하는 것!

@@ -113,10 +113,13 @@ python -m venv testvenv
 venv\Scripts\activate  # Windows
 source testvenv/bin/activate  # macOS/Linux
 ```
+패키지 다운로드
+```
+pip install -r requirements.txt
+```
 FastAPI 실행
 ```
 cd backend
-pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 

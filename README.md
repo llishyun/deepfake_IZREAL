@@ -66,9 +66,32 @@
 
 
 
-
-
 <br>
+
+## **📁 디렉토리 구조**
+```
+deepfake_IZREAL/
+│── backend/
+│   ├── __pycache__/
+│   ├── models/
+│   ├── main.py
+│   ├── model.py
+│   ├── newmodel.py
+│   ├── utils.py
+│
+│── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── README.md
+│
+│── testenv/
+│── .DS_Store
+│── .gitignore
+│── requirements.txt
+```
 <br>
 
 

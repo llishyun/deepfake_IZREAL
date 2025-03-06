@@ -4,7 +4,6 @@ import os
 import numpy as np
 from facenet_pytorch import MTCNN
 from efficientnet_pytorch import EfficientNet
-from skimage.metrics import structural_similarity as ssim
 import torchvision.transforms as transforms
 from scipy.special import expit
 
@@ -17,13 +16,12 @@ MODEL_DIR = "models"
 os.makedirs(MODEL_DIR, exist_ok=True)
 
 # DB MySQL 연결
-DATABASE_URL = "mysql+pymysql://root:12345678@localhost/video_db"
+DATABASE_URL = "mysql+pymysql://root:peaceOdri19810921@localhost/video_db"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 #DB에 저장
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
-
 Base = declarative_base()
 
 class VideoVote(Base):
@@ -37,8 +35,7 @@ class VideoVote(Base):
 
 Base.metadata.create_all(bind=engine)
 
-
-# ✅ BlazeFace 모델 다운로드 (MTCNN 대체)
+# ✅ BlazeFace 모델 다운로드 (MTCNN 대체 가능성 고려, 현재는 유지)
 face_detector = MTCNN(keep_all=True, device=device)
 
 # ✅ EfficientNet 모델 로드
@@ -51,7 +48,6 @@ transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.Normalize(mean=[0.5], std=[0.5])  # 정규화 추가
 ])
-
 
 # ✅ 얼굴 감지 (MTCNN 사용)
 def detect_faces(video_path, frame_step=10):
@@ -94,16 +90,14 @@ def detect_fake_face(video_path, frame_step=15):
             if faces is not None and len(faces) > 0:
                 x1, y1, x2, y2 = map(int, faces[0])
 
-                # ✅ 얼굴 크기 검증 (0이거나 음수면 기본 크기로 리사이즈)
+                # ✅ 얼굴 크기 검증
                 if x2 - x1 <= 0 or y2 - y1 <= 0:
-                    print(f"🚨 잘못된 얼굴 크기 감지 (x1={x1}, y1={y1}, x2={x2}, y2={y2}) → 기본 크기 사용")
                     face = cv2.resize(rgb_frame, (224, 224))
                 else:
                     face = rgb_frame[y1:y2, x1:x2]
 
                 # ✅ 크롭된 얼굴이 정상적인지 추가 체크
                 if face.shape[0] == 0 or face.shape[1] == 0:
-                    print("🚨 얼굴 크롭 실패 → 기본 크기 사용")
                     face = cv2.resize(rgb_frame, (224, 224))
 
                 # ✅ 변환 후 모델 입력
@@ -131,20 +125,14 @@ def detect_fake_no_face(video_path, frame_step=10):
         if frame_count % frame_step == 0:
             rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             faces, _ = face_detector.detect(rgb_frame)
-
             if faces is not None and len(faces) > 0:
-                x1, y1, x2, y2 = map(int, faces[0])
-                print(f"✅ 감지된 얼굴 좌표: x1={x1}, y1={y1}, x2={x2}, y2={y2}")
-
-                if x2 - x1 > 0 and y2 - y1 > 0:
-                    cap.release()
-                    return True
+                cap.release()
+                return True
 
         frame_count += 1
 
     cap.release()
     return False
-
 
 # ✅ 최종 실행 함수
 def predict_video(video_path):
@@ -163,14 +151,11 @@ def predict_video(video_path):
 
     result = {}
     if score > 0.5:
-        print("✅ 이 영상은 **REAL** 입니다.")
-        result["message"] = "✅ 이 영상은 **REAL** 입니다."
+        result["message"] = "✅ 이 영상은 REAL입니다."
     else:
-        print("🚨 이 영상은 **FAKE** 입니다!")
-        result["message"] = "🚨 이 영상은 **FAKE** 입니다!"
+        result["message"] = "🚨 이 영상은 FAKE입니다!"
 
     result["real_score"] = float(score)
     result["fake_score"] = float(fscore)
 
     return result
-

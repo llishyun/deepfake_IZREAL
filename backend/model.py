@@ -16,7 +16,7 @@ from sqlalchemy.orm import sessionmaker
 MODEL_DIR = "models"
 os.makedirs(MODEL_DIR, exist_ok=True)
 
-# (추가) DB MySQL 연결
+# DB MySQL 연결
 DATABASE_URL = "mysql+pymysql://root:12345678@localhost/video_db"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -38,14 +38,14 @@ class VideoVote(Base):
 Base.metadata.create_all(bind=engine)
 
 
-# ✅ **BlazeFace 모델 다운로드 (MTCNN 대체)**
+# ✅ BlazeFace 모델 다운로드 (MTCNN 대체)
 face_detector = MTCNN(keep_all=True, device=device)
 
-# ✅ **EfficientNet 모델 로드**
+# ✅ EfficientNet 모델 로드
 net = EfficientNet.from_pretrained('efficientnet-b4').to(device)
 net.eval()
 
-# ✅ **데이터 전처리 설정**
+# ✅ 데이터 전처리 설정
 transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Resize((224, 224)),
@@ -146,7 +146,7 @@ def detect_fake_no_face(video_path, frame_step=10):
     return False
 
 
-# ✅ **최종 실행 함수**
+# ✅ 최종 실행 함수
 def predict_video(video_path):
     print(f"🔍 분석 시작: {video_path}")
 

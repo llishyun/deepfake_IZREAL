@@ -123,7 +123,7 @@ uvicorn main:app --reload
 <br>
 
 ### 3. MySQL (DB) 환경 설정
-MySQL 접속 (로컬에 MySQL이 설치되어 있어야 합니다.)
+MySQL 접속 (로컬에 MySQL이 설치되어 있어야 함)
 ```
 mysql -u root -p
 ```

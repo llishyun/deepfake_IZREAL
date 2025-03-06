@@ -111,6 +111,8 @@ USE video_db;
 ```
 DATABASE changed 메시지가 출력되면 정상적으로 적용된 것입니다.
 
+![Image](https://github.com/user-attachments/assets/699e62b2-136b-469e-9780-fe9157b7f513)
+
 <br>
 
 ### 4. Frontend 환경 설정
@@ -135,23 +137,8 @@ JSON 형식으로 응답이 오면 정상적으로 동작하는 것입니다.
 
 <br>
 
-### MySQL(DB) 환경 설정
-1. 로컬에 MySQL 이 설치되어 있어야 함.
-2. 새 cmd open
-3. mysql -u root -p 입력 후 엔터 => Enter password : 에 본인의 MySQL 비밀번호 입력
-4. video_db 이름의 DB 만들기 -> CREATE DATABASE video_db { 어쩌구 } 스크린 캡쳐해서 붙이기 
-5. USE video_db; 입력하고 cmd 에 DATABASE changed 출력 확인
-   
-![Image](https://github.com/user-attachments/assets/699e62b2-136b-469e-9780-fe9157b7f513)
+
 <br>
 
-### frontend 환경 설정
-1. 로컬에 node.js 가 설치되어 있어야 함. 
-2. 새 cmd open
-3. 프로젝트 폴더의 frontend 폴더로 이동 (cd frontend 입력)
-4. cmd에 npm install axios @mui/material @mui/icons-material react-router-dom react-chartjs-2 chart.js 입력하여 설치
-5. npm start 입력후 localhost:3000 부분 Ctrl+click 으로 접속
-
-<br><br>
 
 
